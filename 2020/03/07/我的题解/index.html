@@ -6,19 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://geekerkamo-lab.cn">
-  <title>Hello World | Duckmoutain&#39;s Blog</title>
+  <title>3170.上升下降字符串 Leetcode周赛 | Duckmoutain&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="解题思路（1）定义int数组存每个字母的个数。（2）从a-z顺序，顺序i&#x3D;0:25，如果存在这个字母CNT[S[i]]&gt;0,就可以把这个字母按顺序存到元字符串当中。（3）z-a就可以i&#x3D;25：0依次把存在的字母放进元数组。重复（2）-（3）。直到i &#x3D;&#x3D; strlen。重组字符串结束。 代码123456789101112131415161718192021222324char * sort">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://geekerkamo-lab.cn/2020/03/15/hello-world/index.html">
+<meta property="og:title" content="3170.上升下降字符串 Leetcode周赛">
+<meta property="og:url" content="https://geekerkamo-lab.cn/2020/03/07/%E6%88%91%E7%9A%84%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="Duckmoutain&#39;s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="解题思路（1）定义int数组存每个字母的个数。（2）从a-z顺序，顺序i&#x3D;0:25，如果存在这个字母CNT[S[i]]&gt;0,就可以把这个字母按顺序存到元字符串当中。（3）z-a就可以i&#x3D;25：0依次把存在的字母放进元数组。重复（2）-（3）。直到i &#x3D;&#x3D; strlen。重组字符串结束。 代码123456789101112131415161718192021222324char * sort">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-03-15T13:21:25.227Z">
-<meta property="article:modified_time" content="2020-03-15T13:21:25.227Z">
+<meta property="og:image" content="https://pic.leetcode-cn.com/70e34f4a02c02ccba7ac611af6e4f511b379462aaf5d32a3c5a6ed808067b5d7-QQ%E6%88%AA%E5%9B%BE20200308005911.png">
+<meta property="article:published_time" content="2020-03-07T14:48:05.000Z">
+<meta property="article:modified_time" content="2020-03-17T10:02:52.637Z">
 <meta property="article:author" content="Duckmoutain">
+<meta property="article:tag" content="Leetcode周赛">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.leetcode-cn.com/70e34f4a02c02ccba7ac611af6e4f511b379462aaf5d32a3c5a6ed808067b5d7-QQ%E6%88%AA%E5%9B%BE20200308005911.png">
   
     <link rel="alternative" href="/atom.xml" title="Duckmoutain&#39;s Blog" type="application/atom+xml">
   
@@ -154,40 +157,29 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-我的题解" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      3170.上升下降字符串 Leetcode周赛
     </h1>
   
 
         
-        <a href="/2020/03/15/hello-world/" class="archive-article-date">
-  	<time datetime="2020-03-15T13:21:25.227Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-15</time>
+        <a href="/2020/03/07/%E6%88%91%E7%9A%84%E9%A2%98%E8%A7%A3/" class="archive-article-date">
+  	<time datetime="2020-03-07T14:48:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+        <p><img src="https://pic.leetcode-cn.com/70e34f4a02c02ccba7ac611af6e4f511b379462aaf5d32a3c5a6ed808067b5d7-QQ%E6%88%AA%E5%9B%BE20200308005911.png" alt="QQ截图20200308005911.png"></p>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>（1）定义int数组存每个字母的个数。<br>（2）从a-z顺序，顺序i=0:25，如果存在这个字母CNT[S[i]]&gt;0,就可以把这个字母按顺序存到元字符串当中。<br>（3）z-a就可以i=25：0依次把存在的字母放进元数组。<br>重复（2）-（3）。<br>直到i == strlen。重组字符串结束。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">char</span> * <span class="title">sortString</span><span class="params">(<span class="keyword">char</span> * s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span>* cnt = (<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*<span class="number">26</span>);</span><br><span class="line">    <span class="built_in">memset</span>(cnt,<span class="number">0</span>,<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*<span class="number">26</span>);</span><br><span class="line">    <span class="keyword">int</span> len = <span class="built_in">strlen</span>(s);</span><br><span class="line">    <span class="keyword">int</span> i = len,j=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(i--)  cnt[ s[i] - <span class="string">'a'</span>]++;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>;i&lt;len;)&#123;</span><br><span class="line">        <span class="keyword">for</span>(j = <span class="number">0</span> ; j&lt;<span class="number">26</span>&amp;&amp;i&lt;len ; j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(cnt[j]&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                s[i++] = <span class="string">'a'</span> + j;</span><br><span class="line">                cnt[j]--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">25</span> ; j&gt;=<span class="number">0</span> &amp;&amp; i&lt;len ; j--)&#123;</span><br><span class="line">            <span class="keyword">if</span>(cnt[j]&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                s[i++] = <span class="string">'a'</span> + j;</span><br><span class="line">                cnt[j]--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -216,6 +208,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Leetcode周赛</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -266,7 +269,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://geekerkamo-lab.cn/2020/03/15/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://geekerkamo-lab.cn/2020/03/07/%E6%88%91%E7%9A%84%E9%A2%98%E8%A7%A3/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -278,20 +281,6 @@
 </article>
 
   
-<nav id="article-nav">
-  
-    <a href="/2020/03/16/%E6%88%91%E7%9A%84%E9%A2%98%E8%A7%A3/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          3170.上升下降字符串 Leetcode周赛
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
