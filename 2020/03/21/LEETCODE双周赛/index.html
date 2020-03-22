@@ -6,22 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://geekerkamo-lab.cn">
-  <title>20200320keep | Duckmoutain&#39;s Blog</title>
+  <title>LEETCODE双周赛 22. | Duckmoutain&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今日运动毕悲报：3.2km时岔气。快走1.6km。合计4.8km。减肥操一套：消耗热量114千卡。合计消耗614km。">
+  <meta name="description" content="第一题 5348. 两个数组间的距离值EASY给你两个整数数组 arr1 ， arr2 和一个整数 d ，请你返回两个数组之间的 距离值 。 「距离值」 定义为符合此描述的元素数目：对于元素 arr1[i] ，不存在任何元素 arr2[j] 满足 |arr1[i]-arr2[j]| &lt;&#x3D; d 。 示例 1：     输入：arr1 &#x3D; [4,5,8], arr2 &#x3D; [10,9,1,8],">
 <meta property="og:type" content="article">
-<meta property="og:title" content="20200320keep">
-<meta property="og:url" content="https://geekerkamo-lab.cn/2020/03/20/20200320keep/index.html">
+<meta property="og:title" content="LEETCODE双周赛 22.">
+<meta property="og:url" content="https://geekerkamo-lab.cn/2020/03/21/LEETCODE%E5%8F%8C%E5%91%A8%E8%B5%9B/index.html">
 <meta property="og:site_name" content="Duckmoutain&#39;s Blog">
-<meta property="og:description" content="今日运动毕悲报：3.2km时岔气。快走1.6km。合计4.8km。减肥操一套：消耗热量114千卡。合计消耗614km。">
+<meta property="og:description" content="第一题 5348. 两个数组间的距离值EASY给你两个整数数组 arr1 ， arr2 和一个整数 d ，请你返回两个数组之间的 距离值 。 「距离值」 定义为符合此描述的元素数目：对于元素 arr1[i] ，不存在任何元素 arr2[j] 满足 |arr1[i]-arr2[j]| &lt;&#x3D; d 。 示例 1：     输入：arr1 &#x3D; [4,5,8], arr2 &#x3D; [10,9,1,8],">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-03-20T14:20:25.000Z">
-<meta property="article:modified_time" content="2020-03-20T14:22:37.939Z">
+<meta property="og:image" content="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/03/21/cinema_seats_1.png">
+<meta property="og:image" content="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/03/21/cinema_seats_3.png">
+<meta property="article:published_time" content="2020-03-21T15:24:18.000Z">
+<meta property="article:modified_time" content="2020-03-22T15:38:45.368Z">
 <meta property="article:author" content="Duckmoutain">
-<meta property="article:tag" content="流水账">
-<meta property="article:tag" content="夜跑">
-<meta property="article:tag" content="keep，间歇性踌躇满志">
+<meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="双周赛">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/03/21/cinema_seats_1.png">
   
     <link rel="alternative" href="/atom.xml" title="Duckmoutain&#39;s Blog" type="application/atom+xml">
   
@@ -153,27 +155,96 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-20200320keep" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-LEETCODE双周赛" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      20200320keep
+      LEETCODE双周赛 22.
     </h1>
   
 
         
-        <a href="/2020/03/20/20200320keep/" class="archive-article-date">
-  	<time datetime="2020-03-20T14:20:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-20</time>
+        <a href="/2020/03/21/LEETCODE%E5%8F%8C%E5%91%A8%E8%B5%9B/" class="archive-article-date">
+  	<time datetime="2020-03-21T15:24:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="今日运动毕"><a href="#今日运动毕" class="headerlink" title="今日运动毕"></a>今日运动毕</h2><p>悲报：3.2km时岔气。快走1.6km。合计4.8km。<br>减肥操一套：消耗热量114千卡。<br>合计消耗614km。</p>
+        <h2 id="第一题-5348-两个数组间的距离值"><a href="#第一题-5348-两个数组间的距离值" class="headerlink" title="第一题 5348. 两个数组间的距离值"></a>第一题 5348. 两个数组间的距离值</h2><h4 id="EASY"><a href="#EASY" class="headerlink" title="EASY"></a>EASY</h4><p>给你两个整数数组 arr1 ， arr2 和一个整数 d ，请你返回两个数组之间的 距离值 。</p>
+<p>「距离值」 定义为符合此描述的元素数目：对于元素 arr1[i] ，不存在任何元素 arr2[j] 满足 |arr1[i]-arr2[j]| &lt;= d 。</p>
+<p>示例 1：</p>
+<blockquote>
+<p>   输入：arr1 = [4,5,8], arr2 = [10,9,1,8], d = 2<br>   输出：2</p>
+<p>   解释：<br>   对于 arr1[0]=4 我们有：<br>   |4-10|=6 &gt; d=2<br>   |4-9|=5 &gt; d=2<br>   |4-1|=3 &gt; d=2<br>   |4-8|=4 &gt; d=2<br>   对于 arr1[1]=5 我们有：<br>   |5-10|=5 &gt; d=2<br>   |5-9|=4 &gt; d=2<br>   |5-1|=4 &gt; d=2<br>   |5-8|=3 &gt; d=2<br>   对于 arr1[2]=8 我们有：<br>   |8-10|=2 &lt;= d=2<br>   |8-9|=1 &lt;= d=2<br>   |8-1|=7 &gt; d=2<br>   |8-8|=0 &lt;= d=2</p>
+</blockquote>
+<p>示例 2：</p>
+<blockquote>
+<p>   输入：arr1 = [1,4,2,3], arr2 = [-4,-3,6,10,20,30], d = 3<br>   输出：2<br>示例 3：</p>
+</blockquote>
+<blockquote>
+<p>   输入：arr1 = [2,1,100,3], arr2 = [-5,-2,10,-3,7], d = 6<br>   输出：1</p>
+</blockquote>
+<p>提示：</p>
+<blockquote>
+<p>   1 &lt;= arr1.length, arr2.length &lt;= 500<br>   -10^3 &lt;= arr1[i], arr2[j] &lt;= 10^3<br>   0 &lt;= d &lt;= 100</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">findTheDistanceValue</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr1, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr2, <span class="keyword">int</span> d)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//暴力遍历 逐个求距离和</span></span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> i,j;</span><br><span class="line">        <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; arr1.size();i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(j = <span class="number">0</span>;j &lt; arr2.size();j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(<span class="built_in">abs</span>(arr1[i]-arr2[j]) &lt;= d) <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(j == arr2.size()) res++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="第二题-5349-安排电影院座位"><a href="#第二题-5349-安排电影院座位" class="headerlink" title="第二题   5349. 安排电影院座位"></a>第二题   5349. 安排电影院座位</h2><h4 id="MIDDLE"><a href="#MIDDLE" class="headerlink" title="MIDDLE"></a>MIDDLE</h4><p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/03/21/cinema_seats_1.png" alt="avatar"></p>
+<p>如上图所示，电影院的观影厅中有 n 行座位，行编号从 1 到 n ，且每一行内总共有 10 个座位，列编号从 1 到 10 。</p>
+<p>给你数组 reservedSeats ，包含所有已经被预约了的座位。比如说，researvedSeats[i]=[3,8] ，它表示第 3 行第 8 个座位被预约了。</p>
+<p>请你返回 最多能安排多少个 4 人家庭 。4 人家庭要占据 同一行内连续 的 4 个座位。隔着过道的座位（比方说 [3,3] 和 [3,4]）不是连续的座位，但是如果你可以将 4 人家庭拆成过道两边各坐 2 人，这样子是允许的。</p>
+<h5 id="示例1"><a href="#示例1" class="headerlink" title="示例1"></a>示例1</h5><p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/03/21/cinema_seats_3.png" alt="avatar"></p>
+<blockquote>
+<p>  输入：n = 3, reservedSeats = [[1,2],[1,3],[1,8],[2,6],[3,1],[3,10]]<br>  输出：4<br>  解释：上图所示是最优的安排方案，总共可以安排 4 个家庭。蓝色的叉表示被预约的座位，橙色的连续座位表示一个 4 人家庭。</p>
+</blockquote>
+<h5 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a>示例 2：</h5><blockquote>
+<p>  输入：n = 2, reservedSeats = [[2,1],[1,8],[2,6]]<br>  输出：2</p>
+</blockquote>
+<h5 id="示例-3："><a href="#示例-3：" class="headerlink" title="示例 3："></a>示例 3：</h5><blockquote>
+<p>  输入：n = 4, reservedSeats = [[4,3],[1,4],[4,6],[1,7]]<br>  输出：4</p>
+</blockquote>
+<p>提示：</p>
+<blockquote>
+<p>   1 &lt;= n &lt;= 10^9<br>   1 &lt;= reservedSeats.length &lt;= min(10*n, 10^4)<br>   reservedSeats[i].length == 2<br>   1 &lt;= reservedSeats[i][0] &lt;= n<br>   1 &lt;= reservedSeats[i][1] &lt;= 10<br>   所有 reservedSeats[i] 都是互不相同的。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line"><span class="comment">//无序图 将每一个被占用的作为放入无序图中，最后检查每一行可以选用的四连坐，</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxNumberOfFamilies</span><span class="params">(<span class="keyword">int</span> n, <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; re)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">unordered_map</span>&lt;<span class="keyword">int</span>, <span class="built_in">unordered_set</span>&lt;<span class="keyword">int</span>&gt;&gt; s;</span><br><span class="line">        <span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">bool</span> f = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> it : re) &#123;</span><br><span class="line">            s[it[<span class="number">0</span>]].insert(it[<span class="number">1</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> it : s) &#123;</span><br><span class="line">            f = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span>(!it.second.count(<span class="number">2</span>) &amp;&amp; !it.second.count(<span class="number">3</span>) &amp;&amp; !it.second.count(<span class="number">4</span>) &amp;&amp; !it.second.count(<span class="number">5</span>)) ++cnt, f = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(!it.second.count(<span class="number">6</span>) &amp;&amp; !it.second.count(<span class="number">7</span>) &amp;&amp; !it.second.count(<span class="number">8</span>) &amp;&amp; !it.second.count(<span class="number">9</span>)) ++cnt, f = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(!it.second.count(<span class="number">4</span>) &amp;&amp; !it.second.count(<span class="number">5</span>) &amp;&amp; !it.second.count(<span class="number">6</span>) &amp;&amp; !it.second.count(<span class="number">7</span>) &amp;&amp; !f) ++cnt;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> cnt + <span class="number">2</span> * (n - s.size());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="第三题-5350-将整数按权重排序"><a href="#第三题-5350-将整数按权重排序" class="headerlink" title="第三题 5350 .将整数按权重排序"></a>第三题 5350 .将整数按权重排序</h2><h4 id="MIDDLE-1"><a href="#MIDDLE-1" class="headerlink" title="MIDDLE"></a>MIDDLE</h4><p>我们将整数 x 的 权重 定义为按照下述规则将 x 变成 1 所需要的步数：</p>
+<p>如果 x 是偶数，那么 x = x / 2<br>如果 x 是奇数，那么 x = 3 * x + 1<br>比方说，x=3 的权重为 7 。因为 3 需要 7 步变成 1 （3 –&gt; 10 –&gt; 5 –&gt; 16 –&gt; 8 –&gt; 4 –&gt; 2 –&gt; 1）。</p>
+<p>给你三个整数 lo， hi 和 k 。你的任务是将区间 [lo, hi] 之间的整数按照它们的权重 升序排序 ，如果大于等于 2 个整数有 相同 的权重，那么按照数字自身的数值 升序排序 。</p>
+<p>请你返回区间 [lo, hi] 之间的整数按权重排序后的第 k 个数。</p>
+<p>注意，题目保证对于任意整数 x （lo &lt;= x &lt;= hi） ，它变成 1 所需要的步数是一个 32 位有符号整数。</p>
+<p>示例 1：</p>
+<blockquote>
+<p>   输入：lo = 12, hi = 15, k = 2<br>   输出：13<br>   解释：12 的权重为 9（12 –&gt; 6 –&gt; 3 –&gt; 10 –&gt; 5 –&gt; 16 –&gt; 8 –&gt; 4 –&gt; 2 –&gt; 1）<br>   13 的权重为 9<br>   14 的权重为 17<br>   15 的权重为 17<br>   区间内的数按权重排序以后的结果为 [12,13,14,15] 。对于 k = 2 ，答案是第二个整数也就是 13 。<br>   注意，12 和 13 有相同的权重，所以我们按照它们本身升序排序。14 和 15 同理。</p>
+</blockquote>
+<p>示例 2：</p>
+<blockquote>
+<p>   输入：lo = 1, hi = 1, k = 1<br>   输出：1</p>
+</blockquote>
+<p>示例 3：</p>
+<blockquote>
+<p>   输入：lo = 7, hi = 11, k = 4<br>   输出：7<br>   解释：区间内整数 [7, 8, 9, 10, 11] 对应的权重为 [16, 3, 19, 6, 14] 。<br>   按权重排序后得到的结果为 [8, 10, 11, 7, 9] 。<br>   排序后数组中第 4 个数字为 7 。</p>
+</blockquote>
+<p>示例 4：</p>
+<blockquote>
+<p>  输入：lo = 10, hi = 20, k = 5<br>   输出：13</p>
+</blockquote>
+<p>示例 5：</p>
+<blockquote>
+<p>   输入：lo = 1, hi = 1000, k = 777<br>   输出：570</p>
+</blockquote>
+<p>提示：</p>
+<blockquote>
+<p>  1 &lt;= lo &lt;= hi &lt;= 1000<br>  1 &lt;= k &lt;= hi - lo + 1</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getK</span><span class="params">(<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> x = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(k!=<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(k%<span class="number">2</span> == <span class="number">1</span>) k = <span class="number">3</span>*k+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span>         k = k/<span class="number">2</span>;</span><br><span class="line">            x++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> x;</span><br><span class="line">    &#125;    </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span>* a,<span class="keyword">int</span>* b)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> x = getK(*a);</span><br><span class="line">        <span class="keyword">int</span> y = getK(*b);</span><br><span class="line">        <span class="keyword">if</span>(x==y) <span class="keyword">return</span> *a - *b;</span><br><span class="line">        <span class="keyword">return</span> x-y;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getKth</span><span class="params">(<span class="keyword">int</span> lo, <span class="keyword">int</span> hi, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res[hi-lo+<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">int</span> i ;</span><br><span class="line">        <span class="keyword">for</span>( i = lo;i&lt;=hi;i++)&#123;</span><br><span class="line">           res[i-lo] = i;</span><br><span class="line">        &#125;</span><br><span class="line">        qsort(res,hi-lo+<span class="number">1</span>,<span class="keyword">sizeof</span>(<span class="keyword">int</span>),cmp);</span><br><span class="line">        <span class="keyword">return</span> res[k<span class="number">-1</span>];</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -208,15 +279,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">流水账</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">夜跑</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">keep，间歇性踌躇满志</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">双周赛</a>
         		</li>
       		
 		</ul>
@@ -272,7 +339,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://geekerkamo-lab.cn/2020/03/20/20200320keep/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://geekerkamo-lab.cn/2020/03/21/LEETCODE%E5%8F%8C%E5%91%A8%E8%B5%9B/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -286,18 +353,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/03/20/200-%E5%B2%9B%E5%B1%BF%E6%95%B0%E9%87%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/03/22/%E2%80%9C20200322KEEP%E2%80%9D/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          200.岛屿数量
+          20200322KEEP
         
       </div>
     </a>
   
   
-    <a href="/2020/03/20/include-cctype/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">#include &lt;cctype&gt;中的字符函数</div>
+    <a href="/2020/03/21/20200321KEEP/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">20200321KEEP</div>
       <i class="icon-circle-right"></i>
     </a>
   
