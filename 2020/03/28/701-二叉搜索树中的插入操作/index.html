@@ -6,19 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://geekerkamo-lab.cn">
-  <title>20200325keep | Duckmoutain&#39;s Blog</title>
+  <title>701.二叉搜索树中的插入操作 | Duckmoutain&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="摸了">
+  <meta name="description" content="给定二叉搜索树（BST）的根节点和要插入树中的值，将值插入二叉搜索树。 返回插入后二叉搜索树的根节点。 保证原始二叉搜索树中不存在新值。 注意，可能存在多种有效的插入方式，只要树在插入后仍保持为二叉搜索树即可。 你可以返回任意有效的结果。 例如,   给定二叉搜索树:     4    &#x2F; \   2   7  &#x2F; \ 1   3 和 插入的值: 5你可以返回这个二叉搜索树:       4">
 <meta property="og:type" content="article">
-<meta property="og:title" content="20200325keep">
-<meta property="og:url" content="https://geekerkamo-lab.cn/2020/03/25/20200325keep/index.html">
+<meta property="og:title" content="701.二叉搜索树中的插入操作">
+<meta property="og:url" content="https://geekerkamo-lab.cn/2020/03/28/701-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="Duckmoutain&#39;s Blog">
-<meta property="og:description" content="摸了">
+<meta property="og:description" content="给定二叉搜索树（BST）的根节点和要插入树中的值，将值插入二叉搜索树。 返回插入后二叉搜索树的根节点。 保证原始二叉搜索树中不存在新值。 注意，可能存在多种有效的插入方式，只要树在插入后仍保持为二叉搜索树即可。 你可以返回任意有效的结果。 例如,   给定二叉搜索树:     4    &#x2F; \   2   7  &#x2F; \ 1   3 和 插入的值: 5你可以返回这个二叉搜索树:       4">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-03-25T12:05:42.000Z">
-<meta property="article:modified_time" content="2020-03-25T12:07:34.814Z">
+<meta property="article:published_time" content="2020-03-28T15:48:37.000Z">
+<meta property="article:modified_time" content="2020-03-28T15:50:41.837Z">
 <meta property="article:author" content="Duckmoutain">
-<meta property="article:tag" content="持续性混吃等死">
+<meta property="article:tag" content="树">
+<meta property="article:tag" content="cpp">
+<meta property="article:tag" content="二叉搜索树">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Duckmoutain&#39;s Blog" type="application/atom+xml">
@@ -151,27 +153,53 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-20200325keep" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-701-二叉搜索树中的插入操作" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      20200325keep
+      701.二叉搜索树中的插入操作
     </h1>
   
 
         
-        <a href="/2020/03/25/20200325keep/" class="archive-article-date">
-  	<time datetime="2020-03-25T12:05:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-25</time>
+        <a href="/2020/03/28/701-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C/" class="archive-article-date">
+  	<time datetime="2020-03-28T15:48:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="摸了"><a href="#摸了" class="headerlink" title="摸了"></a>摸了</h1>
+        <p>给定二叉搜索树（BST）的根节点和要插入树中的值，将值插入二叉搜索树。 返回插入后二叉搜索树的根节点。 保证原始二叉搜索树中不存在新值。</p>
+<p>注意，可能存在多种有效的插入方式，只要树在插入后仍保持为二叉搜索树即可。 你可以返回任意有效的结果。</p>
+<p>例如, </p>
+<blockquote>
+<p>给定二叉搜索树:</p>
+<pre><code>    4
+   / \
+  2   7
+ / \
+1   3</code></pre></blockquote>
+<p>和 插入的值: 5<br>你可以返回这个二叉搜索树:</p>
+<blockquote>
+<pre><code>     4
+   /   \
+  2     7
+ / \   /
+1   3 5</code></pre><p>或者这个树也是有效的:</p>
+</blockquote>
+<blockquote>
+<pre><code>     5
+   /   \
+  2     7
+ / \   
+1   3
+     \
+      4</code></pre></blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; tmp;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">bianli</span><span class="params">(TreeNode* root)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root-&gt;left != <span class="literal">NULL</span>) bianli(root-&gt;left);</span><br><span class="line">        tmp.push_back(root-&gt;val);</span><br><span class="line">        <span class="keyword">if</span>(root-&gt;right != <span class="literal">NULL</span>) bianli(root-&gt;right);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function">TreeNode* <span class="title">sortedArrayToBST</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; num,<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(l &gt; r) <span class="keyword">return</span> <span class="literal">nullptr</span>;</span><br><span class="line">        <span class="keyword">int</span> mid = l + (r - l+<span class="number">1</span>)/<span class="number">2</span>;  <span class="comment">//加1保证左子树节点个数不少于右边的节点个数，不加1也是平衡二叉树搜索树，但是无法通过验证</span></span><br><span class="line">        TreeNode* root = <span class="keyword">new</span> TreeNode(num[mid]);</span><br><span class="line">        root-&gt;left = sortedArrayToBST(num,l,mid - <span class="number">1</span>);</span><br><span class="line">        root-&gt;right = sortedArrayToBST(num,mid+<span class="number">1</span>,r);</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">TreeNode* <span class="title">insertIntoBST</span><span class="params">(TreeNode* root, <span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">        bianli(root);</span><br><span class="line">        <span class="keyword">bool</span> judge = <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> iter = tmp.begin();iter != tmp.end();iter++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(*iter &gt;= val) &#123;judge = <span class="literal">true</span>;tmp.insert(iter, val);<span class="keyword">break</span>;&#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(judge == <span class="literal">false</span>) tmp.insert(tmp.end(), val);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> sortedArrayToBST(tmp, <span class="number">0</span>, tmp.size()<span class="number">-1</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -205,7 +233,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">持续性混吃等死</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">树</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">cpp</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">二叉搜索树</a>
         		</li>
       		
 		</ul>
@@ -261,7 +297,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://geekerkamo-lab.cn/2020/03/25/20200325keep/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://geekerkamo-lab.cn/2020/03/28/701-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -275,18 +311,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/03/28/20200328keep/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          20200328keep
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/03/25/20200324keep/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">20200324keep</div>
+    <a href="/2020/03/28/820-%E5%8D%95%E8%AF%8D%E7%9A%84%E5%8E%8B%E7%BC%A9%E7%BC%96%E7%A0%81/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">820.单词的压缩编码</div>
       <i class="icon-circle-right"></i>
     </a>
   
