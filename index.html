@@ -148,6 +148,152 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-182场周赛" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/29/182%E5%9C%BA%E5%91%A8%E8%B5%9B/">182场周赛</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/29/182%E5%9C%BA%E5%91%A8%E8%B5%9B/" class="archive-article-date">
+  	<time datetime="2020-03-29T07:21:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Proble-1"><a href="#Proble-1" class="headerlink" title="Proble 1"></a>Proble 1</h2><h2 id="5368-找出数组中的幸运数"><a href="#5368-找出数组中的幸运数" class="headerlink" title="5368. 找出数组中的幸运数"></a>5368. 找出数组中的幸运数</h2><p>在整数数组中，如果一个整数的出现频次和它的数值大小相等，我们就称这个整数为「幸运数」。</p>
+<p>给你一个整数数组 arr，请你从中找出并返回一个幸运数。</p>
+<p>如果数组中存在多个幸运数，只需返回 最大 的那个。<br>如果数组中不含幸运数，则返回 -1 。</p>
+<p>难度：EASY</p>
+<h4 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a>示例 1：</h4><blockquote>
+<p>输入：arr = [2,2,3,4]<br>输出：2<br>解释：数组中唯一的幸运数是 2 ，因为数值 2 的出现频次也是 2 。</p>
+</blockquote>
+<h4 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a>示例 2：</h4><blockquote>
+<p>输入：arr = [1,2,2,3,3,3]<br>输出：3<br>解释：1、2 以及 3 都是幸运数，只需要返回其中最大的 3 。</p>
+</blockquote>
+<h4 id="示例-3："><a href="#示例-3：" class="headerlink" title="示例 3："></a>示例 3：</h4><blockquote>
+<p>输入：arr = [2,2,2,3,3]<br>输出：-1<br>解释：数组中不存在幸运数。</p>
+</blockquote>
+<h4 id="示例-4："><a href="#示例-4：" class="headerlink" title="示例 4："></a>示例 4：</h4><blockquote>
+<p>输入：arr = [5]<br>输出：-1</p>
+</blockquote>
+<h4 id="示例-5："><a href="#示例-5：" class="headerlink" title="示例 5："></a>示例 5：</h4><blockquote>
+<p>输入：arr = [7,7,7,7,7,7,7]<br>输出：7</p>
+</blockquote>
+<p>提示：</p>
+<blockquote>
+<p>1 &lt;= arr.length &lt;= 500<br>1 &lt;= arr[i] &lt;= 500</p>
+</blockquote>
+<h3 id="个人思路"><a href="#个人思路" class="headerlink" title="个人思路"></a>个人思路</h3><pre><code>快速排序。
+哈希表&lt;int,int&gt;一次存储，二次计算。</code></pre><p>优化：<br>    排序后倒序计算。符合要求直接返回。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">findLucky</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr)</span> </span>&#123;</span><br><span class="line">        sort(arr.begin(),arr.end());</span><br><span class="line">        <span class="built_in">unordered_map</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; hashmap;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> i:arr)&#123;</span><br><span class="line">            hashmap[i]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = arr.size()<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">            <span class="keyword">if</span>(arr[i] == hashmap[arr[i]])</span><br><span class="line">                <span class="keyword">return</span> arr[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Problem-2"><a href="#Problem-2" class="headerlink" title="Problem 2"></a>Problem 2</h2><h2 id="5369-统计作战单位数"><a href="#5369-统计作战单位数" class="headerlink" title="5369. 统计作战单位数"></a>5369. 统计作战单位数</h2><p> 难度：MIDDLE</p>
+<p> n 名士兵站成一排。每个士兵都有一个 独一无二 的评分 rating 。</p>
+<p>每 3 个士兵可以组成一个作战单位，分组规则如下：</p>
+<p>从队伍中选出下标分别为 i、j、k 的 3 名士兵，他们的评分分别为 rating[i]、rating[j]、rating[k]<br>作战单位需满足： rating[i] &lt; rating[j] &lt; rating[k] 或者 rating[i] &gt; rating[j] &gt; rating[k] ，其中  0 &lt;= i &lt; j &lt; k &lt; n<br>请你返回按上述条件可以组建的作战单位数量。每个士兵都可以是多个作战单位的一部分。</p>
+<h4 id="示例-1：-1"><a href="#示例-1：-1" class="headerlink" title="示例 1："></a>示例 1：</h4><blockquote>
+<p>输入：rating = [2,5,3,4,1]<br>输出：3<br>解释：我们可以组建三个作战单位 (2,3,4)、(5,4,1)、(5,3,1) 。</p>
+</blockquote>
+<h4 id="示例-2：-1"><a href="#示例-2：-1" class="headerlink" title="示例 2："></a>示例 2：</h4><blockquote>
+<p>输入：rating = [2,1,3]<br>输出：0<br>解释：根据题目条件，我们无法组建作战单位。</p>
+</blockquote>
+<h4 id="示例-3：-1"><a href="#示例-3：-1" class="headerlink" title="示例 3："></a>示例 3：</h4><blockquote>
+<p>输入：rating = [1,2,3,4]<br>输出：4</p>
+</blockquote>
+<p>提示：</p>
+<blockquote>
+<p>n == rating.length<br>1 &lt;= n &lt;= 200<br>1 &lt;= rating[i] &lt;= 10^5</p>
+</blockquote>
+<h3 id="个人思路-1"><a href="#个人思路-1" class="headerlink" title="个人思路"></a>个人思路</h3><pre><code>三指针。
+直接题意暴力求解。</code></pre><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">numTeams</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; rating)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> Size = rating.size();</span><br><span class="line">        <span class="keyword">if</span>(Size&lt;<span class="number">3</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> i,j,k;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(j = <span class="number">2</span>;j  &lt; Size;j++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; j;i++)&#123;</span><br><span class="line">                <span class="keyword">for</span>(k = i+<span class="number">1</span>; k &lt; j;k++)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(rating[i] &gt; rating[k] &amp;&amp;rating[k] &gt; rating[j] ) res++;</span><br><span class="line">                    <span class="keyword">if</span>(rating[i] &lt; rating[k] &amp;&amp;rating[k] &lt; rating[j] ) res++;    </span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Problem-3"><a href="#Problem-3" class="headerlink" title="Problem 3"></a>Problem 3</h3><h3 id="5370-设计地铁系统"><a href="#5370-设计地铁系统" class="headerlink" title="5370. 设计地铁系统"></a>5370. 设计地铁系统</h3><p>难度 MIDDLE</p>
+<p>请你实现一个类 UndergroundSystem ，它支持以下 3 种方法：</p>
+<ol>
+<li>checkIn(int id, string stationName, int t)</li>
+</ol>
+<p>编号为 id 的乘客在 t 时刻进入地铁站 stationName 。<br>一个乘客在同一时间只能在一个地铁站进入或者离开。</p>
+<ol start="2">
+<li>checkOut(int id, string stationName, int t)</li>
+</ol>
+<p>编号为 id 的乘客在 t 时刻离开地铁站 stationName 。</p>
+<ol start="3">
+<li>getAverageTime(string startStation, string endStation) </li>
+</ol>
+<p>返回从地铁站 startStation 到地铁站 endStation 的平均花费时间。<br>平均时间计算的行程包括当前为止所有从 startStation 直接到达 endStation 的行程。<br>调用 getAverageTime 时，询问的路线至少包含一趟行程。<br>你可以假设所有对 checkIn 和 checkOut 的调用都是符合逻辑的。也就是说，如果一个顾客在 t1 时刻到达某个地铁站，那么他离开的时间 t2 一定满足 t2 &gt; t1 。所有的事件都按时间顺序给出。</p>
+<p>示例：</p>
+<p>输入：<br>[“UndergroundSystem”,”checkIn”,”checkIn”,”checkIn”,”checkOut”,”checkOut”,”checkOut”,”getAverageTime”,”getAverageTime”,”checkIn”,”getAverageTime”,”checkOut”,”getAverageTime”]<br>[[],[45,”Leyton”,3],[32,”Paradise”,8],[27,”Leyton”,10],[45,”Waterloo”,15],[27,”Waterloo”,20],[32,”Cambridge”,22],[“Paradise”,”Cambridge”],[“Leyton”,”Waterloo”],[10,”Leyton”,24],[“Leyton”,”Waterloo”],[10,”Waterloo”,38],[“Leyton”,”Waterloo”]]</p>
+<p>输出：<br>[null,null,null,null,null,null,null,14.0,11.0,null,11.0,null,12.0]</p>
+<p>解释：<br>UndergroundSystem undergroundSystem = new UndergroundSystem();<br>undergroundSystem.checkIn(45, “Leyton”, 3);<br>undergroundSystem.checkIn(32, “Paradise”, 8);<br>undergroundSystem.checkIn(27, “Leyton”, 10);<br>undergroundSystem.checkOut(45, “Waterloo”, 15);<br>undergroundSystem.checkOut(27, “Waterloo”, 20);<br>undergroundSystem.checkOut(32, “Cambridge”, 22);<br>undergroundSystem.getAverageTime(“Paradise”, “Cambridge”);       // 返回 14.0。从 “Paradise”（时刻 8）到 “Cambridge”(时刻 22)的行程只有一趟<br>undergroundSystem.getAverageTime(“Leyton”, “Waterloo”);          // 返回 11.0。总共有 2 躺从 “Leyton” 到 “Waterloo” 的行程，编号为 id=45 的乘客出发于 time=3 到达于 time=15，编号为 id=27 的乘客于 time=10 出发于 time=20 到达。所以平均时间为 ( (15-3) + (20-10) ) / 2 = 11.0<br>undergroundSystem.checkIn(10, “Leyton”, 24);<br>undergroundSystem.getAverageTime(“Leyton”, “Waterloo”);          // 返回 11.0<br>undergroundSystem.checkOut(10, “Waterloo”, 38);<br>undergroundSystem.getAverageTime(“Leyton”, “Waterloo”);          // 返回 12.0</p>
+<p>提示：</p>
+<p>总共最多有 20000 次操作。<br>1 &lt;= id, t &lt;= 10^6<br>所有的字符串包含大写字母，小写字母和数字。<br>1 &lt;= stationName.length &lt;= 10<br>与标准答案误差在 10^-5 以内的结果都视为正确结果。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UndergroundSystem</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">        <span class="built_in">unordered_map</span>&lt;<span class="built_in">string</span>,<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&gt; hashmap;</span><br><span class="line">    UndergroundSystem() &#123;</span><br><span class="line">        <span class="built_in">unordered_map</span>&lt;<span class="built_in">string</span>,<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&gt; hashmap;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">checkIn</span><span class="params">(<span class="keyword">int</span> id, <span class="built_in">string</span> stationName, <span class="keyword">int</span> t)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; tmp;</span><br><span class="line">        tmp.push_back(id);</span><br><span class="line">        tmp.push_back(t);</span><br><span class="line">        hashmap[stationName].push_back(tmp);</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">checkOut</span><span class="params">(<span class="keyword">int</span> id, <span class="built_in">string</span> stationName, <span class="keyword">int</span> t)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; tmp;</span><br><span class="line">        tmp.push_back(id);</span><br><span class="line">        tmp.push_back(t);<span class="comment">//</span></span><br><span class="line">        hashmap[stationName].push_back(tmp);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">double</span> <span class="title">getAverageTime</span><span class="params">(<span class="built_in">string</span> startStation, <span class="built_in">string</span> endStation)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">double</span> res;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> i = <span class="number">0</span>;i &lt; hashmap[startStation].size();i++)&#123;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">auto</span> j = <span class="number">0</span>;j&lt;hashmap[endStation].size();j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(hashmap[startStation][i][<span class="number">0</span>] == hashmap[endStation][j][<span class="number">0</span>])&#123;</span><br><span class="line">                    <span class="keyword">if</span>(hashmap[startStation][i][<span class="number">1</span>] &lt; hashmap[endStation][j][<span class="number">1</span>])</span><br><span class="line">                        &#123;</span><br><span class="line">                        res+= hashmap[endStation][j][<span class="number">1</span>] - hashmap[startStation][i][<span class="number">1</span>];</span><br><span class="line">                        count ++;</span><br><span class="line">                        &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res/count;</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">周赛</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/29/182%E5%9C%BA%E5%91%A8%E8%B5%9B/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-701-二叉搜索树中的插入操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -211,11 +357,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">cpp</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">二叉搜索树</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">二叉搜索树</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">cpp</a>
         		</li>
       		
 		</ul>
@@ -979,83 +1125,6 @@
 
 
   
-    <article id="post-20200321KEEP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/21/20200321KEEP/">20200321KEEP</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/21/20200321KEEP/" class="archive-article-date">
-  	<time datetime="2020-03-21T15:20:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="摸了"><a href="#摸了" class="headerlink" title="摸了"></a>摸了</h1>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">持续性混吃等死</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">摸了</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/21/20200321KEEP/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1185,6 +1254,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">周赛</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">夜跑</a>
               </li>
              
@@ -1221,11 +1294,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">cpp</a>
+                <a href="javascript:void(0)" class="js-tag color1">二叉搜索树</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">二叉搜索树</a>
+                <a href="javascript:void(0)" class="js-tag color4">cpp</a>
               </li>
              
               <li class="article-tag-list-item">
