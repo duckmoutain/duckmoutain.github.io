@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://geekerkamo-lab.cn">
   <title>vim常用操作 | Duckmoutain&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="命令行参数12345678910111213141516:set nu               #显示行数:q!                   #不保存退出:wq                   #保存退出并修改文件修改时间:x                    #保存并推出，若有修改才变更修改时间:num                  #跳转至 num 行:s&#x2F;srcStr">
+  <meta name="description" content="vim 配置1234567891011121314&quot;语法高亮set synatax&#x3D;on&quot;自动缩进set autoindent&quot;Tab的宽度set tabstop&#x3D;4&quot;显示行号set number&quot;高亮显示匹配的括号set showmatch   命令行参数12345678910111213141516:set nu               #显示行数:q!">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vim常用操作">
 <meta property="og:url" content="https://geekerkamo-lab.cn/2020/04/03/vim%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="Duckmoutain&#39;s Blog">
-<meta property="og:description" content="命令行参数12345678910111213141516:set nu               #显示行数:q!                   #不保存退出:wq                   #保存退出并修改文件修改时间:x                    #保存并推出，若有修改才变更修改时间:num                  #跳转至 num 行:s&#x2F;srcStr">
+<meta property="og:description" content="vim 配置1234567891011121314&quot;语法高亮set synatax&#x3D;on&quot;自动缩进set autoindent&quot;Tab的宽度set tabstop&#x3D;4&quot;显示行号set number&quot;高亮显示匹配的括号set showmatch   命令行参数12345678910111213141516:set nu               #显示行数:q!">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-03T13:37:22.000Z">
-<meta property="article:modified_time" content="2020-04-05T11:54:52.557Z">
+<meta property="article:modified_time" content="2020-04-05T14:06:02.939Z">
 <meta property="article:author" content="Duckmoutain">
 <meta property="article:tag" content="linux">
 <meta property="article:tag" content="vim">
@@ -172,7 +172,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">:<span class="keyword">set</span> <span class="keyword">nu</span>               #显示行数</span><br><span class="line">:q!                   #不保存退出</span><br><span class="line">:<span class="keyword">wq</span>                   #保存退出并修改文件修改时间</span><br><span class="line">:<span class="keyword">x</span>                    #保存并推出，若有修改才变更修改时间</span><br><span class="line">:num                  #跳转至 num 行</span><br><span class="line">:s/srcStr/newStr      #将 当前行 的第一个 srcStr 变更为 newStr</span><br><span class="line">:s/srcStr/newStr/g    #当前行 所有 替换</span><br><span class="line">:s#srcStr#newStr      #拿来转义 /</span><br><span class="line">:%s/srcStr/newStr     #全文 所有 替换</span><br><span class="line"></span><br><span class="line">:dd                   #删除当前行</span><br><span class="line">:ndd                  #删除n行</span><br><span class="line">:yy                   #复制当前行</span><br><span class="line">:nyy</span><br><span class="line">:<span class="keyword">p</span>                    #粘贴</span><br><span class="line">:<span class="keyword">u</span>                    #撤销</span><br></pre></td></tr></table></figure>
+        <h2 id="vim-配置"><a href="#vim-配置" class="headerlink" title="vim 配置"></a>vim 配置</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">"语法高亮</span></span><br><span class="line"><span class="keyword">set</span> synatax=<span class="keyword">on</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"自动缩进</span></span><br><span class="line"><span class="keyword">set</span> autoindent</span><br><span class="line"></span><br><span class="line"><span class="comment">"Tab的宽度</span></span><br><span class="line"><span class="keyword">set</span> tabstop=<span class="number">4</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"显示行号</span></span><br><span class="line"><span class="keyword">set</span> <span class="keyword">number</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"高亮显示匹配的括号</span></span><br><span class="line"><span class="keyword">set</span> showmatch</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">:<span class="keyword">set</span> <span class="keyword">nu</span>               #显示行数</span><br><span class="line">:q!                   #不保存退出</span><br><span class="line">:<span class="keyword">wq</span>                   #保存退出并修改文件修改时间</span><br><span class="line">:<span class="keyword">x</span>                    #保存并推出，若有修改才变更修改时间</span><br><span class="line">:num                  #跳转至 num 行</span><br><span class="line">:s/srcStr/newStr      #将 当前行 的第一个 srcStr 变更为 newStr</span><br><span class="line">:s/srcStr/newStr/g    #当前行 所有 替换</span><br><span class="line">:s#srcStr#newStr      #拿来转义 /</span><br><span class="line">:%s/srcStr/newStr     #全文 所有 替换</span><br><span class="line"></span><br><span class="line">:dd                   #删除当前行</span><br><span class="line">:ndd                  #删除n行</span><br><span class="line">:yy                   #复制当前行</span><br><span class="line">:nyy</span><br><span class="line">:<span class="keyword">p</span>                    #粘贴</span><br><span class="line">:<span class="keyword">u</span>                    #撤销</span><br></pre></td></tr></table></figure>
 
 
       
@@ -426,23 +429,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">周赛</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">每日打卡</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">广度优先遍历</a>
+                <a href="javascript:void(0)" class="js-tag color3">夜跑</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -450,7 +437,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">夜跑</a>
+                <a href="javascript:void(0)" class="js-tag color5">keep</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -466,11 +453,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">keep</a>
+                <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">每日打卡</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">广度优先遍历</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">间歇性踌躇满志</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">周赛</a>
               </li>
              
               <li class="article-tag-list-item">
